@@ -33,7 +33,7 @@ public class Metric {
 	
 	//get the stability
 	public float getStability(){
-		float stability;
+		float stability =1f;
 		
 		//   ce
 		// --------
@@ -41,9 +41,9 @@ public class Metric {
 		
 		//stop divide by zero errors
 		if(getOutDegree() > 0) {
-			stability = (getOutDegree() / (getInDegree() + getOutDegree()));
+			stability = (getOutDegree() / ((float)getInDegree() + (float)getOutDegree()));
 		}else {
-			stability=0;
+			stability=0f;
 		}
 			return stability;
 		}
